@@ -1,0 +1,11 @@
+{% extends 'admin.html' %}
+
+{% block conten %}
+  <h2>Supprimer {{ doc.nom }}</h2>
+  <p>Êtes-vous sûr de vouloir supprimer '{{ doc.nom }}'?</p>
+  <form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Oui">
+  </form>
+  <a href="{% url 'doc_detail' pk=doc.pk %}">Annuler</a>
+{% endblock %}

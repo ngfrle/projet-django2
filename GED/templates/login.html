@@ -1,0 +1,72 @@
+{% extends 'admin.html' %}
+{% load static %}
+ 
+
+
+  {% block conten %}
+
+
+  <div class="form1">
+
+  <div class="container mt-3" style="margin-left: 450px;padding-left:55px ;background-color:black; height:95vh;width: 40vw; border-radius:20px;">
+   
+<br><br>
+ <div style=" width: 255px; margin:0;" >
+                <div class="brand">
+                <span style="color: orange;width:10pxpx; height:20px; " class="lab la-affiliatetheme"> </span>
+                    <h3 style="color: orange;">GED-uisj</h3>
+            </div>
+            <div>
+
+<br>
+
+
+    <h4 style="color:white">login</h4>
+    <hr color="white">
+    <br><br>
+    <style>
+        
+        li{
+            color:white;
+        }
+        input{
+            height:40px;
+             width: 30vw;
+        }
+        label {
+            color: white;
+        }
+    </style>
+
+    <!-- <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" style="background-color:orange; border-radius: 5%; width: 100px;" value="Login">
+      </form> -->
+
+
+    
+    <form method="post">
+        {% csrf_token %}
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+        <br/><br/>
+        <label for="password">Mot de passe:</label>
+        <input type="password" name="password" id="password" required>
+        <br/><br/>
+        <input type="submit" style="background-color:orange; border-radius: 5%; width: 100px;" value="Login">
+    </form>
+
+    <br>
+    <br>
+    <div>
+        <a href="{% url 'registerE' %}" style="color:orange;">SignUP</a>
+        <br>
+        <br>
+        
+        <a href="{% url 'password_reset' %}" style="color:orange;">reset password</a>
+    </div>
+</div>
+</div>
+{% endblock %}
+ 

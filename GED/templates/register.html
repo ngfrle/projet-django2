@@ -1,0 +1,58 @@
+{% extends 'admin.html'%}{% load static %}
+
+
+
+{% block conten %}
+
+
+<div class="container mt-3"
+    style="margin:15vw 0vw 15vw 15vw vw;padding:20 20 20 20 px;background-color:black; height:110vh;width: 40vw; border-radius:20px;">
+    <div class="form2">
+        <div style=" width: 255px; margin:0;">
+            <div class="brand">
+                <span style="color: orange;width:10pxpx; " class="lab la-affiliatetheme"> </span>
+                <h3 style="color: orange;">GED-uisj</h3>
+            </div>
+            <div>
+                <h4 style="color:white">singnUP</h4>
+                <hr color="white"; style="width: 25vw;">
+
+                <style>
+                    .form2 {
+                        height: 8vw;
+                        width: 100vw;
+                        margin-left:50px;
+                        padding-left:10px;
+                    }
+
+                    form {
+                        padding-left: 20px;
+                    }
+
+                    li {
+                        color: white;
+                    }
+
+                    input {
+                        height: 34px;
+                        width: 25vw;
+                    }
+
+                    label {
+                        color: white;
+                    }
+                </style>
+                <form action="" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit"
+                        style="background-color: orange; margin: left 67px; border-radius:5px;">SignUp</button>
+                        <div>
+                            <a href="{% url 'login' %}" style="color:orange;">SignIn</a>
+                        </div>
+                        <br>
+                </form>
+                
+    </div>
+ </div>
+        {% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'admin.html' %}
+
+{% block conten %}
+
+
+
+
+
+
+
+
+
+<hr>
+<br>
+<br>
+<div class="container" mt-3>
+    <h4  style="color:white" >
+        Files List
+    </h4>
+    <hr>
+    <table class="table">
+        <thead>
+            <tr>
+                <th style="color:white">Nom</th>
+                <th style="color:white">Auteur</th>
+                <th style="color:white">Categorie</th>
+                <th style="color:white">Description</th>
+                <th style="color:white">Fichier</th>
+                <th style="color:white">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for doc in docs %}
+            <tr>
+              <td style="color:white" >{{ doc.nom }}</td>
+              <td style="color:white" >{{ doc.auteur }}</td>
+              <td style="color:white" >{{ doc.categorie }}</td>
+              <td style="color:white" >{{ doc.description }}</td>
+              <td ><a style="color:white" href="{{ doc.file.url }}">{{ doc.file.name }}</a></td>
+              <td>
+                <a href="{% url 'doc_detail' pk=doc.pk %}">Voir</a> |
+                <a href="{% url 'doc_update' pk=doc.pk %}">Modifier</a> |
+                <form action="{% url 'doc_delete' pk=doc.pk %}" method="post">
+                  {% csrf_token %}
+                  <input style="color:red" type="submit" value="Supprimer"/>
+                </form>
+              </td>
+            </tr>
+            {% endfor %}
+    </tbody>
+    </table>
+</div>
+<br>
+<div style="margin-left: 60px;background-color:orange;border-radius:5px; margin-right:75vw;padding-left: 65px;">
+  <a  style="color:white;"href="{% url 'add_file' %}">Nouveau document</a>
+</div>
+
+{% endblock %}

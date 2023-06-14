@@ -1,0 +1,12 @@
+{% extends 'admin.html' %}
+
+{% block conten %}
+<div style="color:white ;background-color:black; ;border-radius:20px;margin:15vw;padding-left:250px;height:25vw ; padding:80px;padding-left:300px;">
+  <h2  style="color:white">{{ doc.nom }}</h2>
+  <p  style="color:white"><strong style="color:white">Auteur:</strong> {{ doc.auteur }}</p>
+  <p  style="color:white"><strong style="color:white">Categorie:</strong> {{ doc.categorie }}</p>
+  <p  style="color:white"><strong style="color:white">Description:</strong> {{ doc.description }}</p>
+  <p  style="color:white"><strong style="color:white">Fichier:</strong> <a href="{{ doc.file.url }}">{{ doc.file.name }}</a></p>
+  <p  style="color:white"><a style="color:white ;background-color: orange" href="{% url 'doc_list' %}">Retour à la liste des documents</a></p>
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'admin.html' %}
+ 
+ {% load static %}
+
+{% block conten %}
+<div class="container mt-3">
+    <div style="background-color:orange; width:100% ;padding-left:20px;">
+<h2>
+    Interface Administrateur de notre systeme de gestion des document (GED)
+</h2>
+</div>
+<br>
+<br>
+
+    <h4 style="color:white">Update Document</h4>
+
+
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Enregistrer">
+        <!-- <button class="btn btn-Warning" type="submit" >Update File</button>
+        <a href="{% url 'add_file' %}"> Detail des ajout</a> -->
+      </form>
+    {% endblock %}
+           
+       
+

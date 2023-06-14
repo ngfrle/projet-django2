@@ -1,0 +1,40 @@
+{% extends 'admin.html' %}
+ 
+ {% load static %}
+{% block conten %}
+<div class="container mt-3">
+    <div style="background-color:orange; width:100%;top:5px; height:100px;margin-left:-200px; padding-left:100px; position: fixed;">
+<h2>
+    Interface Administrateur de notre systeme de gestion des document (GED)
+</h2>
+</div>
+<br><br>
+<br><br>
+
+
+
+
+    <h4 style="color:white">Add New Document</h4>
+    <hr>
+    <style>
+        label {
+            color: white;
+        }
+    </style>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" style="background-color: orange;  border-radius:5px;">Add file</button>
+    </form>
+    <br>
+   <button style=" width:80px; height: 40;background-color: orange;  border-radius:5px;"><a href="{% url 'doc_list' %}" style="color:white;">consultez</a> </button> 
+
+</div>
+
+
+
+
+
+   
+
+{% endblock %}
