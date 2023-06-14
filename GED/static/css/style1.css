@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family= poppins:wght@300;400;500;600&display=swap');
+:root{
+    --main:orange;
+    --bg: #0B1218;
+    --bg-body: #131D28;
+}
+
+*{
+    font-family:'poppins', sans-serif;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+input, button{
+    outline:none;
+}
+#menu-togglle{
+    display:none;
+}
+
+.brand{
+    padding: .5rem 2rem;
+    display: flex;
+    color:var(--main);
+    align-items: center;
+    height: 70px;
+}
+ .brand span{
+    font-size:1.8rem;
+    margin-right: .5rem;
+ }
+.sidebar-user{
+margin: 2.5rem 0rem;
+}
+.sider-img{
+ 
+    height: 120px;
+    width: 120px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    border: 1px solid #3e454d;
+    border-radius: 50%;
+    padding-left: 120px;
+}
+.user{
+    text-align: center;
+    color: #fff;
+    margin-top: .5rem;
+     
+}
+.user small{
+    display: inline-block;
+    color: var(--main);
+    margin-top: .5rem;
+}
+ .sidemenu{
+    padding:.5rem;
+ }
+ .sidemenu li{
+    margin-bottom: .8rem;
+ }
+ .sidemenu a {
+
+    color: #fff;
+    font-size: .85rem;
+    display: flex;
+    align-items: center;
+    /* padding: .4rem 0rem; */
+ }
+ .sidemenu a span:first-child{
+    font: 1.3rem;
+    padding:0rem .6rem ; 
+ }
+ .sidemenu a.active {
+   background: var(--main);
+   color:#fff;
+   border-radius: 4px;
+   height: 45px;
+
+
+ }
+ 
+ .main-content{
+    margin-left:280px;
+    min-height:100vh;
+    padding: .5rem;
+    background: var(--bg-body);
+ }
+ header{
+    height: 70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:var(--bg);
+    padding:0rem 1rem;
+    position:fixed;
+    left: calc(280px + .5rem);
+    right:.5rem ;
+    top: .5rem; 
+    border: radius 3px;
+   
+ }
+
+ .menu-toggler{
+    height: 45px;
+    width: 45px;
+    background: var(--main);
+    color:#fff;
+    display:grid;
+    place-items: center;
+    border-radius: 15px;
+ }
+
+.search{
+    display:flex;
+    width: 300px;
+    border-radius: 30px;
+    overflow-x:hidden;
+    border: 3px solid #3e454d;
+    align-items:center;
+}
+.search span{
+    font-size: 1.3rem;
+    color:#fff;
+    padding-left: 1rem;
+}
+.search input{
+    flex:1;
+    height: 42px;
+    border:none;
+    background:transparent;
+    padding:1rem;
+    color:#fff;
+}
+
+.lol{
+    background-color: #fff;
+    height:100px;
+    width:10px;
+    margin-right:40px;
+}
+main{
+    margin-top: calc(70px + .5rem);
+    padding: 1rem 0rem;
+    display: flex;
+    justify-content:space-between;
+    position:fixed;
+    padding-left: 20px;
+   
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+}
+
+
+.card{
+    background: var(--bg);
+    padding:2rem 1rem;
+}
+.card-icon{
+    text-align:center;
+    display: grid;
+    place-items: center;
+}
+.card-icon span{
+    height: 55px;
+    width: 55px;
+    color: #fff;
+    font-size: 2 rem; 
+    border-radius:6px;
+    display: grid;
+    place-items: center;
+}
+
+.follow span{
+    color:#0072f2;
+    background: #e5f3fe;
+}
+.likes span{
+    color:#f42af6;
+    background:#fde9ea;
+}
+.comment span{
+    color:#ffbc01;
+    background:#fff8e5;
+}
+.card-info{
+    text-align: center;
+    margin-top: .6rem;
+}
+.card-info h2 {
+    font-size:3rem;
+    color:#efefef;
+}
+.card-info small{
+    display: inline-block;
+    color: var(--main);
+    font-weight: 500;
+
+}
+.card-images{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-top: 1.3rem;
+}
+
+.card-images div {
+    height:30px;
+    width:30px;
+    background-size:cover;
+    background-repeat:no-repeat;
+    border-radius:50px;
+    border: 2px solid #efefef;
+    position: relative;
+    margin-left:-15px;
+}
+
+
+
+.siderbar{
+    height: 100%;
+    left: 0;
+    top: 0;
+    position:fixed;
+    background:var(--bg);
+    width: 280px;
+    overflow-y: auto;
+    position:fixed;
+    margin:0px;
+
+
+}
+ 
+/* .auth{
+    display: flex;
+    justify-content:space-around;
+} */
